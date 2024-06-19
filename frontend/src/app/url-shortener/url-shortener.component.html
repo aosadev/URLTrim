@@ -1,0 +1,14 @@
+<div class="container mt-5">
+    <h1 class="text-center">URL Shortener</h1>
+    <form (submit)="shortenUrl()">
+      <div class="form-group">
+        <label for="url">Enter URL:</label>
+        <input [(ngModel)]="url" name="url" id="url" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Shorten</button>
+    </form>
+    <div *ngIf="shortenedUrl" class="alert alert-success mt-3">
+      Shortened URL: <a [href]="shortenedUrl" target="_blank">{{ shortenedUrl }}</a>
+    </div>
+  </div>
+  
